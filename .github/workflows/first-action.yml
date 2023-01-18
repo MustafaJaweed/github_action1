@@ -1,0 +1,21 @@
+#Name of the workflow. name is a reserved key
+name: First Workflow
+
+#Event when the workflow must be triggered. on is a reserved key 
+#workflow_dispatch indicates that this workflow can be triggered manually
+on: workflow_dispatch
+
+#jobs (reserved) indicate the action must be performed when event condition is met
+#runs-on (resreved)
+#echo is a keyword to run content on console
+jobs: 
+  first-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print greeting
+        run: echo "Hello World"
+      
+      - name: Print Goodbye
+        run: echo "Goodbye"
+      
+    
